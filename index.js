@@ -1,42 +1,68 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer } = require('apollo-server');
 const { config } = require('dotenv');
+const { typeDefs } = require('./typeDefs')
 
 config();
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
 // your data.
-const typeDefs = gql`
-  # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
-  # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
-    title: String
-    author: String
-  }
+const owner1 = {
+  name: 'Austin',
+  email: 'austin@example.com',
+};
 
-  # The "Query" type is special: it lists all of the available queries that
-  # clients can execute, along with the return type for each. In this
-  # case, the "books" query returns an array of zero or more Books (defined above).
-  type Query {
-    books: [Book]
-  }
-`;
+const owner2 = {
+  name: 'Drew',
+  email: 'drew@example.com',
+};
 
-const books = [
+const meta1 = {
+  id: 1,
+  owner: owner1,
+  industry: 'Software Developer',
+};
+
+const meta2 = {
+  id: 1,
+  owner: owner1,
+  industry: 'Sales Associate',
+};
+
+const education1 = [
   {
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling',
+    university: 'University of Tennessee',
+    degree_type: 'Bachelor of Science',
+  },
+  { university: 'Harvard University', degree_type: 'MBA' }
+];
+
+const education2 = [{
+  university: 'Michigan University',
+  degree_type: 'MBA',
+}];
+
+const templates = [
+  {
+    id: 1,
+    type: 'template1',
+    owner: owner1,
+    meta: meta1,
+    educations: education1,
   },
   {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
+    id: 2,
+    type: 'template2',
+    owner: owner2,
+    meta: meta2,
+    educations: education2
   },
 ];
 
 const resolvers = {
   Query: {
-    books: () => books,
+    templates: () => templates,
   },
 };
 
@@ -45,9 +71,6 @@ const server = new ApolloServer({
   resolvers,
   playground: true,
   introspection: true,
-  // engine: {
-  //   apiKey: process.env.ENGINE_API_KEY,
-  // },
 });
 
 // The `listen` method launches a web server.
