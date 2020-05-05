@@ -44,9 +44,10 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   playground: true,
-  engine: {
-    apiKey: process.env.ENGINE_API_KEY,
-  },
+  introspection: true,
+  // engine: {
+  //   apiKey: process.env.ENGINE_API_KEY,
+  // },
 });
 
 // The `listen` method launches a web server.
