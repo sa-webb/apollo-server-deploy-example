@@ -64,8 +64,23 @@ const skill1 = [
 ];
 
 const skill2 = [
-  { id: 1, skill: 'Software engineering', duration: 'Six years' },
-  { id: 2, skill: 'Javascript', duration: 'One year' },
+  {
+    skill: "Software engineering",
+    duration: "Six years"
+  },
+  {
+    skill: "Javascript",
+    duration: "One year"
+  }
+]
+
+const certification1 = [
+  { id: 1, title: 'GCP Architect', description: 'Level 5 Certified', date_received: '1/1/18' },
+  { id: 2, title: 'Azure Portalite', date_received: '12/15/19' },
+
+];
+const certification2 = [
+  { id: 1, title: 'AWS Architect', description: 'Level 3 Systems Certified', date_received: '1/1/20' },
 ];
 
 const templates = [
@@ -76,7 +91,8 @@ const templates = [
     meta: meta1,
     educations: education1,
     experiences: experience1,
-    skills: skill1
+    skills: skill1,
+    certifications: certification1
   },
   {
     id: 2,
@@ -85,7 +101,8 @@ const templates = [
     meta: meta2,
     educations: education2,
     experiences: experience2,
-    skills: skill2
+    skills: skill2,
+    certifications: certification2,
   },
 ];
 
