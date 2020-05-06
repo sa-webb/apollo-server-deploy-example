@@ -14,6 +14,7 @@ const typeDefs = gql`
     owner: Owner
     meta: Meta
     educations: [Education]
+    experiences: [Experience]
   }
 
   type Meta {
@@ -27,6 +28,12 @@ const typeDefs = gql`
     id: Int
     university: String
     degree_type: String
+  }
+
+  type Experience {
+    id: Int
+    company: String
+    title: String
   }
 
   type Query {

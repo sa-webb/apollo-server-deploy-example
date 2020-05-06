@@ -35,6 +35,23 @@ const education2 = [
   },
 ];
 
+const experience1 = [
+  {
+    id: 1,
+    company: 'Facebook',
+    title: 'Software Engineer',
+  },
+  { id: 2, company: 'Google', title: 'Web Developer' },
+];
+
+const experience2 = [
+  {
+    id: 1,
+    company: 'Michigan University',
+    title: 'MBA',
+  },
+];
+
 const templates = [
   {
     id: 1,
@@ -42,6 +59,7 @@ const templates = [
     owner: owner1,
     meta: meta1,
     educations: education1,
+    experiences: experience1
   },
   {
     id: 2,
@@ -49,6 +67,7 @@ const templates = [
     owner: owner2,
     meta: meta2,
     educations: education2,
+    experiences: experience2
   },
 ];
 
