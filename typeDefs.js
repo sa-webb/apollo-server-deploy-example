@@ -15,6 +15,7 @@ const typeDefs = gql`
     meta: Meta
     educations: [Education]
     experiences: [Experience]
+    skills: [Skill]
   }
 
   type Meta {
@@ -34,6 +35,12 @@ const typeDefs = gql`
     id: Int
     company: String
     title: String
+  }
+
+  type Skill {
+    id: Int
+    skill: String
+    duration: String
   }
 
   type Query {

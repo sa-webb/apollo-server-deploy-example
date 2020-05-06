@@ -52,6 +52,22 @@ const experience2 = [
   },
 ];
 
+const skill1 = [
+  {
+    id: 1,
+    skill: 'Microsoft Teams',
+    duration: 'Three years',
+  },
+  { id: 2, skill: 'Microsoft Excel', duration: 'Five year' },
+  { id: 3, skill: 'Web development', },
+  { id: 4, skill: 'Data modeling', duration: 'One year' },
+];
+
+const skill2 = [
+  { id: 1, skill: 'Software engineering', duration: 'Six years' },
+  { id: 2, skill: 'Javascript', duration: 'One year' },
+];
+
 const templates = [
   {
     id: 1,
@@ -59,7 +75,8 @@ const templates = [
     owner: owner1,
     meta: meta1,
     educations: education1,
-    experiences: experience1
+    experiences: experience1,
+    skills: skill1
   },
   {
     id: 2,
@@ -67,7 +84,8 @@ const templates = [
     owner: owner2,
     meta: meta2,
     educations: education2,
-    experiences: experience2
+    experiences: experience2,
+    skills: skill2
   },
 ];
 
