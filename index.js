@@ -1,13 +1,13 @@
 const { ApolloServer } = require('apollo-server');
 const { config } = require('dotenv');
 const { typeDefs } = require('./typeDefs')
-const { templates } = require('./data')
+const { books } = require('./data')
 
 config();
 
 const resolvers = {
   Query: {
-    templates: () => templates,
+    books: () => books,
   },
 };
 
@@ -20,7 +20,7 @@ const server = new ApolloServer({
   playground: true,
   introspection: true,
   engine: {
-    apiKey: process.env.ENGINE_API_KEY,
+    apiKey: process.env.APOLLO_KEY,
   },
 });
 
