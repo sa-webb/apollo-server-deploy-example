@@ -11,7 +11,7 @@
   "author": "Austin Webb <stevenaustinwebb@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.13.0",
+    "apollo-server": "^2.14.2",
     "dotenv": "^8.2.0",
     "graphql": "^15.0.0"
   }
